@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="display:flex; flex-direction: row; gap: 20px;">
+        {% for relative in relatives %}
+            <div style="min-width: 100px; background-color: aquamarine; padding: 10px;">
+                <p style="font-size: 20px;"><b>Name: </b>{{ relative.name }}</p>
+                <p><b>Surname: </b>{{ relative.surname }}</p>
+                <p><b>Age: </b>{{ relative.age }}</p>
+                <p><b>Birth date: </b>{{ relative.birth_date }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
