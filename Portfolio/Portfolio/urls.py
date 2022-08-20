@@ -1,10 +1,8 @@
 from django.contrib import admin
-from django.urls import path
-from Portfolio.views import home
-from AppModels.views import relatives
+from django.urls import path, include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home),
-    path('relatives/', relatives)
+    path('AppModels/', include('AppModels.urls')),
 ]

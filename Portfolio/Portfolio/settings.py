@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'AppModels',
+    'AppModels'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/matia/Desktop/DesafPython/Portfolio/Portfolio/templates'],
+        'DIRS': ['C:/Users/matia/Desktop/DesafPython/Portfolio/AppModels/templates/AppModels'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

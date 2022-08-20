@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Home</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="{% static 'AppModels/css/styles.css'%}" rel="stylesheet" />
+    </head>
+    <body class="w-100">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="">Relatives</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            </div>
+        </nav>
+
+        <section class="pt-4 h-auto w-100 row justify-content-center">
+            <div class="container w-100 py-lg-5 row justify-content-center">
+
+                {% for relative in relatives %}
+                    <div class="card mx-lg-5" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">{{relative.name}}</h5>
+                        <p class="card-text">{{relative.surname}}</p>
+                        <p class="card-text">Age: {{relative.age}}</p>
+                        <p class="card-text">Birth date: {{relative.birth_date}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'AppModels/js/scripts.js'%}"></script>
+    </body>
+</html>
